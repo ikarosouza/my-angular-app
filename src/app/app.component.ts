@@ -11,4 +11,12 @@ export class AppComponent {
             "May", "June", "July", "August", "September",
             "October", "November", "December"];
   isAvailable = false;
+
+  myClickFunction(event){
+    this.isAvailable = !this.isAvailable;
+  }
+
+  getMonthChange(event){
+    console.log("The new month is " + event.target.value);
+  }
 }
