@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
@@ -14,7 +15,13 @@ import { SqrtPipe } from './sqrt.pipe';
     SqrtPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+      {
+        path: 'user',
+        component: UserComponent
+      } 
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
